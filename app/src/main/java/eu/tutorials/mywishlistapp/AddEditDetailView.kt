@@ -51,24 +51,23 @@ fun AddEditDetailView(
 
             WishTextField(label = "Title",
                 value = viewModel.wishTitleState,
-                onValueChanged = {
-                    viewModel.onWishTitleChanged(it)
+                onValueChanged = { title ->
+                    viewModel.onWishTitleChanged(title)
                 } )
 
             Spacer(modifier = Modifier.height(10.dp))
 
             WishTextField(label = "Description",
                 value = viewModel.wishDescriptionState,
-                onValueChanged = {
-                    viewModel.onWishDescriptionChanged(it)
+                onValueChanged = { desc ->
+                    viewModel.onWishDescriptionChanged(desc)
                 } )
 
             Spacer(modifier = Modifier.height(10.dp))
-            Button(onClick={
-                if(viewModel.wishTitleState.isNotEmpty() &&
-                    viewModel.wishDescriptionState.isNotEmpty()){
+            Button(onClick = {
+                if (viewModel.wishTitleState.isNotEmpty() && viewModel.wishDescriptionState.isNotEmpty()) {
                     //TODO UpdateWish
-                }else{
+                } else {
                     // TODO AddWish
                 }
 
