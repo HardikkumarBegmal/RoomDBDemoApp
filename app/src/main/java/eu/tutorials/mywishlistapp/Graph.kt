@@ -17,4 +17,4 @@ object Graph {
         database = Room.databaseBuilder(context, WishDatabase::class.java, "wishlist.db").build()
     }
 
-}
+} // Singleton - one instance is created in app
