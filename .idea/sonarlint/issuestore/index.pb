@@ -36,8 +36,6 @@ l
 <app/src/main/java/eu/tutorials/mywishlistapp/MainActivity.kt,5/2/52d1308acea61b79b3df37057781927c851066a0
 j
 :app/src/main/java/eu/tutorials/mywishlistapp/Navigation.kt,0/1/011dda59ef4ef43c4af4dba639cf6c59dbb0df97
-h
-8app/src/main/java/eu/tutorials/mywishlistapp/HomeView.kt,c/f/cf8d644c0e9d9a763b9d1a3bdf972d9da6abaaea
 f
 6app/src/main/java/eu/tutorials/mywishlistapp/AppBar.kt,1/6/16dbdb2a469af45093104b976ab7f65f405656c4
 w
