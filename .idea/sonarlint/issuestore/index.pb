@@ -114,3 +114,5 @@ w
 G.idea/sonarlint/issuestore/8/3/83d8b75c361e39b83be836560bead2af645448f0,7/3/737eb06407957108278136e7ee69f816113ce00e
 i
 9app/src/main/java/eu/tutorials/mywishlistapp/data/Wish.kt,0/f/0fe8cdc8cee8f86399dee608e4e3f454e604b9a8
+q
+Aapp/src/main/java/eu/tutorials/mywishlistapp/data/WishDatabase.kt,1/c/1c6e3b18d825be8145dbf51a68e1a9ce0a7b467c
