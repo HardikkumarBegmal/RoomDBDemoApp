@@ -42,6 +42,7 @@ fun HomeView(
     viewModel: WishViewModel
 ){
     val context = LocalContext.current
+    val wishList = viewModel.getAllWishes.collectAsState(initial = emptyList())
     Scaffold(
         topBar = {AppBarView(title= "WishList", {
          Toast.makeText(context, "Button Clicked", Toast.LENGTH_LONG).show()
@@ -61,7 +62,6 @@ fun HomeView(
         }
 
     ) {
-        val wishList = viewModel.getAllWishes.collectAsState(initial = listOf())
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
@@ -71,9 +71,7 @@ fun HomeView(
 
                 val dismissState = rememberDismissState(
                     confirmStateChange = { dismissValue ->
-                        if (dismissValue == DismissValue.DismissedToEnd ||
-                            dismissValue == DismissValue.DismissedToStart
-                        ) {
+                        if (dismissValue == DismissValue.DismissedToEnd || dismissValue == DismissValue.DismissedToStart) {
                             viewModel.deleteWish(wish)
                             true
                         } else {
@@ -81,15 +79,6 @@ fun HomeView(
                         }
                     }
                 )
-
-                if (dismissState.isDismissed(DismissDirection.StartToEnd) ||
-                    dismissState.isDismissed(DismissDirection.EndToStart)
-                ) {
-                    // Trigger deletion after animation completes
-                    LaunchedEffect(Unit) {
-                        viewModel.deleteWish(wish)
-                    }
-                }
 
                 SwipeToDismiss(
                     state = dismissState,
