@@ -20,8 +20,6 @@ A
 gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4
 C
 settings.gradle.kts,7/4/749edfcc96398253e5b3416184e95c46621da850
-D
-app/build.gradle.kts,d/2/d2a4383452aad84a18429a5844d31330a012a9e6
 n
 >app/src/main/java/eu/tutorials/mywishlistapp/ui/theme/Color.kt,d/6/d6e773ae647684acb3a49696326bc32917d3d2db
 ~
@@ -34,8 +32,6 @@ m
 =app/src/main/java/eu/tutorials/mywishlistapp/ui/theme/Type.kt,c/3/c3bf41699379236e5e6abbac55fda2fc72dad1c5
 l
 <app/src/main/java/eu/tutorials/mywishlistapp/MainActivity.kt,5/2/52d1308acea61b79b3df37057781927c851066a0
-f
-6app/src/main/java/eu/tutorials/mywishlistapp/AppBar.kt,1/6/16dbdb2a469af45093104b976ab7f65f405656c4
 w
 G.idea/sonarlint/issuestore/4/9/496a238a6afa168dbaf6efd37bb459331589579c,6/e/6e9644ddf83ab52f39902ecdbfdf4118285ac40c
 w
@@ -70,8 +66,6 @@ w
 G.idea/sonarlint/issuestore/4/d/4dc05236462a8ec07e44b4ba5aed627d1faa10a0,8/3/83d8b75c361e39b83be836560bead2af645448f0
 w
 G.idea/sonarlint/issuestore/7/4/749edfcc96398253e5b3416184e95c46621da850,d/4/d4115e7e13112fe372c450a6354345d7e7531a57
-l
-<app/src/main/java/eu/tutorials/mywishlistapp/data/WishDao.kt,1/1/111ed842ede83042e1070c4a332fbd4a266bb990
 w
 G.idea/sonarlint/issuestore/6/e/6e9644ddf83ab52f39902ecdbfdf4118285ac40c,4/2/4291a6ab95c696f29dcedea66516b99a0fd0f28a
 w
@@ -116,3 +110,9 @@ i
 9app/src/main/java/eu/tutorials/mywishlistapp/data/Wish.kt,0/f/0fe8cdc8cee8f86399dee608e4e3f454e604b9a8
 q
 Aapp/src/main/java/eu/tutorials/mywishlistapp/data/WishDatabase.kt,1/c/1c6e3b18d825be8145dbf51a68e1a9ce0a7b467c
+e
+5app/src/main/java/eu/tutorials/mywishlistapp/Graph.kt,1/5/1573319d91f1636e4c973a70946793217b5f1739
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+k
+;app/src/main/java/eu/tutorials/mywishlistapp/WishListApp.kt,e/f/ef28c9897b53027863d326b96785f5d08fb57071

@@ -24,7 +24,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.rememberDismissState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -32,7 +31,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import eu.tutorials.mywishlistapp.data.DummyWish
 import eu.tutorials.mywishlistapp.data.Wish
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -44,10 +42,13 @@ fun HomeView(
     val context = LocalContext.current
     val wishList = viewModel.getAllWishes.collectAsState(initial = emptyList())
     Scaffold(
-        topBar = {AppBarView(title= "WishList", {
-         Toast.makeText(context, "Button Clicked", Toast.LENGTH_LONG).show()
-
-        })},
+        topBar = {
+            AppBarView(
+                title= "WishList"
+            ) {
+                Toast.makeText(context, "Button Clicked", Toast.LENGTH_LONG).show()
+            }
+        },
         floatingActionButton = {
             FloatingActionButton(
                 modifier = Modifier.padding(all = 20.dp),
@@ -73,33 +74,29 @@ fun HomeView(
                     confirmStateChange = { dismissValue ->
                         if (dismissValue == DismissValue.DismissedToEnd || dismissValue == DismissValue.DismissedToStart) {
                             viewModel.deleteWish(wish)
-                            true
-                        } else {
-                            false
                         }
+                        true
                     }
                 )
 
                 SwipeToDismiss(
                     state = dismissState,
                     background = {
-                        Box(
+                        /*Box(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .background(Color.Red)
-                        )
+                        )*/
                     },
                     directions = setOf(DismissDirection.StartToEnd, DismissDirection.EndToStart),
-                    dismissThresholds = { FractionalThreshold(0.5f) },
+                    dismissThresholds = { FractionalThreshold(0.25f) },
                     dismissContent = {
-                        if (wishList.value.contains(wish)) {
-                            WishItem(wish = wish) {
-                                navController.navigate(Screen.AddScreen.route + "/${wish.id}")
-                            }
+                        WishItem(wish = wish) {
+                            val id = wish.id
+                            navController.navigate(Screen.AddScreen.route + "/$id")
                         }
                     }
                 )
-
             }
         }
 
