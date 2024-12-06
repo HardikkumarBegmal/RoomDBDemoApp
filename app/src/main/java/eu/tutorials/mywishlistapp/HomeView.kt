@@ -1,6 +1,7 @@
 package eu.tutorials.mywishlistapp
 
 import android.widget.Toast
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -82,10 +83,9 @@ fun HomeView(
                 SwipeToDismiss(
                     state = dismissState,
                     background = {
-                        /*Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(Color.Red)
+                        /*val color by animateColorAsState(
+                            if (dismissState.dismissDirection == DismissDirection.EndToStart) Color.Red else Color.Transparent,
+                            label = ""
                         )*/
                     },
                     directions = setOf(DismissDirection.StartToEnd, DismissDirection.EndToStart),
